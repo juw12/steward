@@ -1,0 +1,29 @@
+version: "3.9"
+
+services:
+  proxy:
+    build:
+      context: ./packages/proxy
+      dockerfile: Dockerfile
+    ports:
+      - "8080:8080"
+    environment:
+      - OPENAI_API_KEY=${OPENAI_API_KEY:-}
+    volumes:
+      - proxy-data:/app/data
+    restart: unless-stopped
+
+  dashboard:
+    build:
+      context: ./apps/dashboard
+      dockerfile: Dockerfile
+    ports:
+      - "3000:3000"
+    environment:
+      - NEXT_PUBLIC_PROXY_URL=http://localhost:8080
+    depends_on:
+      - proxy
+    restart: unless-stopped
+
+volumes:
+  proxy-data:

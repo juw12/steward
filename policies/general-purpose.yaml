@@ -1,0 +1,36 @@
+name: general-purpose
+description: General-purpose AI assistant with broad topic coverage. Suitable for internal tools and prototyping.
+version: 1
+default_action: allow
+redirect_message: |
+  I'm a general-purpose assistant. I can help with a wide range of topics. How can I help you?
+block_message: |
+  That request involves harmful or prohibited content. I can't help with that.
+features:
+  general:
+    description: Broad general assistance across many topics.
+    allowed_intents:
+      - answer_questions
+      - summarize_text
+      - write_draft
+      - brainstorm_ideas
+      - translate_text
+      - explain_concept
+      - code_review
+      - debug_error
+    denied_intents:
+      - hack_system
+      - write_malware
+      - generate_hate_speech
+      - impersonate_person
+  research:
+    description: Help with research, fact-checking, and information synthesis.
+    allowed_intents:
+      - search_information
+      - compare_options
+      - summarize_document
+      - fact_check
+    denied_intents:
+      - write_malware
+      - impersonate_person
+      - generate_hate_speech

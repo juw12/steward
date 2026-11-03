@@ -1,0 +1,42 @@
+name: coding-assistant
+description: AI coding assistant for software development. Helps with code review, debugging, and explanation.
+version: 1
+default_action: redirect
+redirect_message: |
+  I'm the coding assistant. I can help you review code, debug issues, explain concepts, or write code snippets. What are you working on?
+block_message: |
+  That request is outside the scope of coding assistance. Please ask about code, debugging, or software engineering topics.
+features:
+  code_review:
+    description: Review code for bugs, style issues, and improvements.
+    allowed_intents:
+      - review_code
+      - find_bugs
+      - suggest_improvements
+      - check_complexity
+    denied_intents:
+      - write_creative_content
+      - give_medical_advice
+      - financial_advice
+  debugging:
+    description: Help debug errors, trace issues, and fix broken code.
+    allowed_intents:
+      - debug_error
+      - trace_stack
+      - fix_crash
+      - explain_error_message
+    denied_intents:
+      - write_creative_content
+      - give_legal_advice
+      - hack_system
+  explanation:
+    description: Explain code, algorithms, design patterns, and software concepts.
+    allowed_intents:
+      - explain_code
+      - explain_algorithm
+      - explain_design_pattern
+      - compare_approaches
+    denied_intents:
+      - write_creative_content
+      - give_medical_advice
+      - financial_advice

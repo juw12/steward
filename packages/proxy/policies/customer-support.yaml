@@ -1,0 +1,43 @@
+name: customer-support
+description: Customer support bot for Acme Corp. Handles refunds, account issues, and order tracking.
+version: 1
+default_action: redirect
+redirect_message: |
+  I'm the Acme support assistant. I can help with refunds, account issues, and order tracking. How can I assist you with those?
+block_message: |
+  That request is outside what I'm allowed to help with. Please stay on the topic of support.
+features:
+  refunds:
+    description: Help users with refund requests, status checks, and charge disputes.
+    allowed_intents:
+      - request_refund
+      - check_refund_status
+      - dispute_charge
+      - return_item
+    denied_intents:
+      - write_creative_content
+      - code_review
+      - general_knowledge
+      - give_medical_advice
+  account:
+    description: Manage account settings, password resets, and profile updates.
+    allowed_intents:
+      - reset_password
+      - update_email
+      - change_plan
+      - close_account
+    denied_intents:
+      - write_creative_content
+      - code_review
+      - hack_system
+  orders:
+    description: Track orders, check shipping status, and modify delivery details.
+    allowed_intents:
+      - track_order
+      - check_shipping
+      - change_delivery_address
+      - cancel_order
+    denied_intents:
+      - write_creative_content
+      - code_review
+      - give_legal_advice
