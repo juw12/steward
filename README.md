@@ -1,4 +1,44 @@
-# Steward
+<!-- HERO:START -->
+<p align="center">
+  <a href="https://github.com/juw12/steward"><img src="docs/media/banner.jpg" alt="Steward: Keep embedded AI on-mission." width="100%"></a>
+</p>
+
+<p align="center">
+  <b>Keep embedded AI on-mission.</b><br>
+  A drop-in governance layer that detects off-task use, deflects curious drift and blocks hostile injection.
+</p>
+
+<p align="center">
+  <a href="#highlights">Highlights</a> ·
+  <a href="https://github.com/juw12">More by juw12</a>
+</p>
+
+<p align="center">
+  <a href="https://github.com/juw12/steward"><img src="https://img.shields.io/github/last-commit/juw12/steward?label=updated&color=1e40af" alt="Last updated"></a>
+  <img src="https://img.shields.io/badge/TypeScript-24292f" alt="TypeScript">
+  <img src="https://img.shields.io/badge/Drop--in-24292f" alt="Drop-in">
+</p>
+
+<a id="highlights"></a>
+<table>
+  <tr>
+    <td width="33%" valign="top">
+      <b>Detects off-task use</b><br>
+      Spots requests that fall outside your assistant's job.
+    </td>
+    <td width="33%" valign="top">
+      <b>Deflects drift</b><br>
+      Steers curious, related questions back on track.
+    </td>
+    <td width="33%" valign="top">
+      <b>Blocks injection</b><br>
+      Stops hostile prompt injection before it reaches your model.
+    </td>
+  </tr>
+</table>
+<!-- HERO:END -->
+
+## About
 
 Drop-in governance layer that keeps embedded AI on-mission. Detects off-task use,
 deflects curious drift, blocks hostile injection, attributes cost, and gives the
