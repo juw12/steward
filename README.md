@@ -4,8 +4,8 @@
 </p>
 
 <p align="center">
-  <b>Keep embedded AI on-mission.</b><br>
-  A drop-in governance layer that detects off-task use, deflects curious drift and blocks hostile injection.
+  <b>Keep your AI chatbot on its job.</b><br>
+  See what off-task use costs, politely redirect curious drift and block prompt injection. Drop-in, works with any model.
 </p>
 
 <p align="center">
@@ -40,9 +40,9 @@
 
 ## About
 
-Drop-in governance layer that keeps embedded AI on-mission. Detects off-task use,
-deflects curious drift, blocks hostile injection, attributes cost, and gives the
-business a dashboard.
+Keeps your customer-facing AI chatbot on its job and shows what off-task use costs.
+A drop-in, OpenAI-compatible proxy that detects off-task use, politely redirects curious
+drift, blocks prompt injection, logs cost per feature, and gives the business a dashboard.
 
 ```
 ┌────────────┐     ┌──────────────────────────────────┐     ┌────────────┐
