@@ -9,6 +9,7 @@
 </p>
 
 <p align="center">
+  <a href="https://juw12.github.io/steward/"><b>Try it live</b></a> ·
   <a href="#highlights">Highlights</a> ·
   <a href="https://github.com/juw12">More by juw12</a>
 </p>
@@ -63,6 +64,10 @@ drift, blocks prompt injection, logs cost per feature, and gives the business a 
                    └──────────────────────┘
 ```
 
+## Try it in your browser
+
+The [**Steward Playground**](https://juw12.github.io/steward/) runs the guard entirely in your browser: chat as different users, simulate traffic, watch the dashboard, correct the classifier and measure accuracy against a labelled evaluation set. It adds a daily off-topic allowance (THROTTLE) and an "unmet demand" report on top of the allow / redirect / block flow. Source and a self-hosted Python server: [`apps/playground`](apps/playground). Measured accuracy of the local classifier on the CAD-copilot policy (`apps/playground/server/tests.py`): 100% on the tuning set, 79% strict / 89% allow-vs-block on a blind set, 85% on a final held-out set. For production, enable the optional LLM judge.
+
 ## What's in the box
 
 | Path | What it is | Status |
@@ -71,6 +76,7 @@ drift, blocks prompt injection, logs cost per feature, and gives the business a 
 | `packages/sdk-typescript/` | TypeScript SDK (`guard`) | 11/11 tests pass |
 | `packages/proxy/` | FastAPI OpenAI-compatible proxy + audit log | 10/10 tests pass |
 | `apps/dashboard/` | Next.js dashboard (Overview / Audit / Policies / Live) | All 4 pages return 200 |
+| `apps/playground/` | Browser playground (no build step) + self-hosted Python server, formerly ScopeGuard | 19/19 server tests pass |
 | `policies/` | Sample policy YAMLs (customer-support, coding-assistant, general-purpose) | 3 files |
 | `.omo/plans/steward.md` | Original build plan with contracts | Reference |
 
@@ -83,8 +89,7 @@ drift, blocks prompt injection, logs cost per feature, and gives the business a 
 
 ## Run it in 4 commands
 
-You need: **Python 3.10+**, and **Node.js** (or use the portable Node.js skill at
-`C:\Users\juwen_lie\.config\opencode\skills\portable-nodejs\bin`).
+You need: **Python 3.10+** and **Node.js 20+**.
 
 ### Terminal 1 — Start the proxy
 

@@ -1,0 +1,38 @@
+name: tests
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+
+jobs:
+  python:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - run: pip install -e packages/sdk-python -e packages/proxy pytest httpx
+      - run: cd packages/sdk-python && python -m pytest -q
+      - run: cd packages/proxy && python -m pytest -q
+      - run: cd apps/playground/server && python tests.py
+      - run: python apps/playground/tests/test_scopeguard_web.py
+
+  typescript:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: "22"
+      - run: cd packages/sdk-typescript && npm ci && npm test
+
+  dashboard:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: "22"
+      - run: cd apps/dashboard && npm ci && npm run build && npm audit --omit=dev --audit-level=high
