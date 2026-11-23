@@ -39,6 +39,15 @@
 </table>
 <!-- HERO:END -->
 
+## Get it on your device
+
+- **Windows:** [`Steward-Windows-Setup.exe`](https://github.com/juw12/steward/releases/download/desktop/Steward-Windows-Setup.exe) (no admin needed; if Windows says it protected your PC, choose *More info → Run anyway*), or without installing [`Steward-Windows-Portable.zip`](https://github.com/juw12/steward/releases/download/desktop/Steward-Windows-Portable.zip).
+- **Mac:** [`Steward-macOS-AppleSilicon.dmg`](https://github.com/juw12/steward/releases/download/desktop/Steward-macOS-AppleSilicon.dmg) (M1 and newer) or [`Steward-macOS-Intel.dmg`](https://github.com/juw12/steward/releases/download/desktop/Steward-macOS-Intel.dmg). The first time, macOS blocks it because it is not notarized: **System Settings → Privacy & Security → Open Anyway**.
+- **Android:** [`Steward-android.apk`](https://github.com/juw12/steward/releases/download/android/Steward-android.apk): open the file on the phone and allow your browser to install apps once.
+- **iPhone:** open https://juw12.github.io/steward/ in Safari, tap Share, then **Add to Home Screen**.
+
+The Windows, Mac and Android apps open the Steward Playground in a window of its own ([`desktop/`](desktop/README.md), [`android/`](android/README.md)) and change with it. The playground is a demo that runs in the page; Steward itself is the server that sits in front of a chatbot. Each build is opened on GitHub's machines before it is published: on Windows and on a Mac the page loads, the app starts and can store data; on an Android emulator it installs, opens and stays up. They are not code-signed or notarised, and no real phone or PC has run them yet.
+
 ## About
 
 Keeps your customer-facing AI chatbot on its job and shows what off-task use costs.
